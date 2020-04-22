@@ -11,12 +11,28 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 # Foreman to manage multiple processes
 gem 'foreman', '~> 0.87.1'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+# Use omniauth for OAuth
+gem 'omniauth'
+gem 'omniauth-facebook'
+# Use .env to manage environment variables
+gem 'dotenv-rails'
+# Use serializers
+gem 'active_model_serializers'
+# Use jquery
+gem 'jquery-rails'
+
+# Handle CORS (Cross Origin Resource Sharing)
+gem 'rack-cors'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
