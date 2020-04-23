@@ -1,12 +1,12 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import fetchTrips from './actions/fetchTrips';
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //     fetch('http://localhost:3000/api/v1/trips')
-  //     .then(response => response.json())
-  //     .then(data => console.log(data[0]))
-  // }
+  componentDidMount() {
+    this.props.fetchTrips({type: 'FETCH_TRIPS', payload: {name: 'January Trip'}});
+  }
 
   render() {
     return (
@@ -17,4 +17,14 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// const mapStateToProps = (state) =>  {
+//     return {
+//       trips: state.trips
+//     }
+// }
+//
+const mapDispatchToProps = () => {
+
+}
+
+export default connect(null, {fetchTrips})(App);
