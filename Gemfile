@@ -34,6 +34,8 @@ gem 'jquery-rails'
 # Handle CORS (Cross Origin Resource Sharing)
 gem 'rack-cors'
 
+# Use pry to debug
+gem 'pry'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

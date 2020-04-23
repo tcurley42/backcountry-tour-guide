@@ -3,7 +3,11 @@ class Api::V1::RoutesController < ApplicationController
   before_action :set_trip
 
   def index
-    @routes = @trip.routes
+    if @trip
+      @routes = @trip.routes
+    else
+      @routes = Route.all
+    end
     render json: @routes
   end
 

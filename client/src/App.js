@@ -1,21 +1,20 @@
 import React from 'react';
-import logo from './site image.jpg';
-import './App.css';
-import LoginForm from './components/LoginForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Welcome to Backcountry Tour Guide!
-        <br/>
-        <br/>
-        <img src={logo} className="App-logo" alt="logo" />
-        <br/>
-      <LoginForm />
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  // componentDidMount() {
+  //     fetch('http://localhost:3000/api/v1/trips')
+  //     .then(response => response.json())
+  //     .then(data => console.log(data[0]))
+  // }
+
+  render() {
+    return (
+      <div className="App">
+        App
+      </div>
+    );
+  }
 }
 
 export default App;
