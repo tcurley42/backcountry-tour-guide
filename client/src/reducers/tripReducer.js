@@ -7,5 +7,4 @@ export default function tripReducer(state={trips: []}, action) {
     default:
       return state;
   }
-  return state;
 }

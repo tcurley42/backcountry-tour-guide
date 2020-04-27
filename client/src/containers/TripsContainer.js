@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import fetchTrips from '../actions/fetchTrips';
 import TripInput from '../components/TripInput';
-import Trip from '../components/Trip';
+import Trips from '../components/Trips';
 
 class TripsContainer extends React.Component {
 
@@ -15,7 +15,7 @@ class TripsContainer extends React.Component {
       <div>
         TripsContainer
         <TripInput/>
-        <Trip/>
+        <Trips trips={this.props.trips}/>
       </div>
     )
   }
