@@ -27,6 +27,6 @@ class Api::V1::TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:name).permit(:description)
+    params.require(:trip).permit(:name, :description)
   end
 end
