@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import fetchTrips from '../actions/fetchTrips';
 import TripInput from '../components/TripInput';
 import Trips from '../components/Trips';
+import {Route} from 'react-router-dom';
 
 class TripsContainer extends React.Component {
 
@@ -13,8 +14,7 @@ class TripsContainer extends React.Component {
   render() {
     return (
       <div>
-        TripsContainer
-        <TripInput/>
+        <Route path='/trips/new' component={TripInput}/>
         <Trips trips={this.props.trips}/>
       </div>
     )
