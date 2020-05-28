@@ -6,11 +6,19 @@ import Routes from '../components/Routes';
 
 class RoutesContainer extends React.Component {
 
+  displayRoutes() {
+    if (this.props.trip) {
+      return <Routes routes={this.props.trip.routes}/>;
+    } else {
+      return "Loading...";
+    }
+  }
+
   render() {
     return (
       <div>
         <RouteInput/>
-        <Routes/>
+        {this.displayRoutes()}
       </div>
     )
   }

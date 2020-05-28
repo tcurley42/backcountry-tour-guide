@@ -2,20 +2,25 @@ import React from 'react';
 import {Redirect} from 'react-router-dom';
 import RoutesContainer from '../containers/RoutesContainer';
 
-const Trip = (props) => {
+const  displayTrip = (trip) => {
+  if (trip) {
+    return (<div><h1>{trip.name}</h1><h3>{trip.description}</h3></div>);
+  } else {
+    return "Loading...";
+  }
+}
 
-  console.log(props)
+
+const Trip = (props) => {
 
   let trip = props.trips.find(e => e.id = props.match.params.id)
 
   console.log(trip)
   return(
     <div>
-    {trip ? null : <Redirect to='/trips'/>}
-    {trip ? <div><h1>{trip.name}</h1><h3>{trip.description}</h3></div> : null}
+    {displayTrip(trip)}
 
-      // Add a Routes component that fetches info and displays all routes
-      <RoutesContainer/>
+      <RoutesContainer trip={trip}/>
     </div>
   )
 }
