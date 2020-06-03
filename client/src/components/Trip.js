@@ -13,7 +13,7 @@ const  displayTrip = (trip) => {
 
 const Trip = (props) => {
 
-  let trip = props.trips.find(e => e.id = props.match.params.id)
+  let trip = props.trips.find(e => e.id === parseInt(props.match.params.id))
 
   console.log(trip)
   return(
