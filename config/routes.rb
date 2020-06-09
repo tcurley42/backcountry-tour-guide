@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :trips do
         resources :routes
       end
+      post '/search', to: 'search#search'
     end
   end
+
 end
