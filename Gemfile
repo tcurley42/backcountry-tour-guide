@@ -42,6 +42,9 @@ gem 'pry'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Use RestClient to handle RESTful requests to external APIs
+gem "rest-client", "~> 1.6.7"
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
