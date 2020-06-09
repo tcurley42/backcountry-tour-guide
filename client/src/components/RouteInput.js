@@ -24,7 +24,7 @@ class RouteInput extends React.Component {
   }
 
   getLatLong = (location) => {
-    Geocode.setApiKey("AIzaSyBRajnL5XopH0hn6q_3c0l6o7c1_w-CGnc");
+    Geocode.setApiKey(process.env.REACT_APP_GOOGLE_API_KEY);
     // Get latidude & longitude from address.
     Geocode.fromAddress(location).then(
       response => {
@@ -59,7 +59,7 @@ class RouteInput extends React.Component {
       return response;
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => this.handleData(data))
     .catch(error => console.error(error));
   }
 
