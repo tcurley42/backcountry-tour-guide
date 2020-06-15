@@ -4536,3 +4536,2134 @@ Processing by Api::V1::SearchController#search as JSON
 Completed 200 OK in 3358ms (Views: 91.7ms | ActiveRecord: 0.0ms | Allocations: 1061295)
 
 
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:34:26 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (90.18ms)
+Completed 200 OK in 156ms (Views: 145.9ms | ActiveRecord: 2.5ms | Allocations: 18750)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:34:31 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.5ms | Allocations: 5332)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:34:51 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms | Allocations: 865)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:35:46 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.32ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.5ms | Allocations: 5334)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:35:52 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms | Allocations: 590)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:38:23 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:38:28 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.69ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 5314)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:38:30 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms | Allocations: 586)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:38:35 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 0.0ms | Allocations: 586)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:39:02 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.83ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 5329)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:39:07 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms | Allocations: 586)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:44:07 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.94ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 5314)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:44:13 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>"", "lon"=>"", "search"=>{"lat"=>"", "lon"=>""}}
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms | Allocations: 594)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/api/V1/search_controller.rb:10:in `search'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:47:29 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.35ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.7ms | Allocations: 5314)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:47:34 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.11ms)
+Completed 200 OK in 200ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 9476)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 11:48:06 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.28ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 11:48:19 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.44ms)
+Completed 200 OK in 129ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 7363)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:24:13 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.61ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.2ms | Allocations: 5348)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:24:19 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.18ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:24:22 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.93ms)
+Completed 200 OK in 162ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:25:04 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 5328)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:25:26 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.3ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:25:30 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.12ms)
+Completed 200 OK in 131ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:26:06 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.69ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.5ms | Allocations: 5318)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:26:10 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.52ms)
+Completed 200 OK in 121ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 7380)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:26:56 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.71ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:26:59 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.23ms)
+Completed 200 OK in 131ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:28:15 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.19ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:28:44 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.73ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:28:46 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.64ms)
+Completed 200 OK in 118ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:29:20 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.06ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:29:22 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.1ms)
+Completed 200 OK in 130ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:37:26 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.53ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 1.1ms | Allocations: 5348)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:38:22 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (8.31ms)
+Completed 200 OK in 132ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:38:50 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.96ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:38:53 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.53ms)
+Completed 200 OK in 124ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 7359)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:39:22 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.8ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:39:26 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.84ms)
+Completed 200 OK in 124ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 7363)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:42:34 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.43ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:45:50 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.53ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:45:54 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.23ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.9ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:45:58 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.93ms)
+Completed 200 OK in 125ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:46:11 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.06ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:46:13 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.58ms)
+Completed 200 OK in 128ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:47:10 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.79ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.5ms | Allocations: 5318)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:47:22 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.87ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:47:49 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.89ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:47:51 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.3ms)
+Completed 200 OK in 124ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 7382)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:48:20 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.47ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 13:48:25 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.22ms)
+Completed 200 OK in 137ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:48:44 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.38ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:48:49 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.84ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:50:21 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.73ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:51:08 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.91ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:51:53 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.9ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 13:59:12 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.86ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 2.5ms | Allocations: 5348)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:00:41 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.52ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:00:44 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.35ms)
+Completed 200 OK in 134ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 7362)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:01:01 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.95ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:01:18 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.98ms)
+Completed 200 OK in 127ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:02:11 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.37ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:02:13 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.33ms)
+Completed 200 OK in 125ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:02:41 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.7ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:02:45 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.83ms)
+Completed 200 OK in 123ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:04:35 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.93ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:04:57 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.04ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:06:21 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (57.62ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.5ms | Allocations: 5318)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:12:18 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.6ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.5ms | Allocations: 13330)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:16:04 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.66ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:16:54 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.22ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:17:05 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.45ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:19:37 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.02ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:19:40 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.22ms)
+Completed 200 OK in 120ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 7585)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:21:14 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.96ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:21:25 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.83ms)
+Completed 200 OK in 363ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:27:39 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.73ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 5348)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:27:43 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.74ms)
+Completed 200 OK in 115ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 7362)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:30:01 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.6ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:31:34 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.41ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:31:51 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.4ms)
+Completed 200 OK in 122ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 7362)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:34:26 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.34ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.7ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:34:44 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.38ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:46:37 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.37ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.0ms | Allocations: 5348)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:47:02 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.71ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 5316)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:50:37 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.27ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:50:41 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.12ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:51:21 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.28ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.7ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:51:23 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.78ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.6ms | Allocations: 5315)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:52:45 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.67ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.4ms | Allocations: 5315)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:52:50 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.45ms)
+Completed 200 OK in 159ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 7380)
+
+
+Started POST "/api/v1/trips/undefined/routes" for ::1 at 2020-06-15 14:53:02 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route"=>{"route_id"=>7000266, "trip_id"=>1}, "tripId"=>1, "trip_id"=>"undefined"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 717)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Trip with 'id'=undefined):
+  
+app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:53:54 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.55ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.7ms | Allocations: 5314)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:53:58 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.41ms)
+Completed 200 OK in 118ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 7360)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 14:54:04 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000266, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000266}}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7000266], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 2248)
+
+
+  
+NoMethodError (undefined method `permit' for "1":String):
+  
+app/controllers/api/V1/routes_controller.rb:44:in `route_params'
+app/controllers/api/V1/routes_controller.rb:18:in `create'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:55:24 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (4.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (42.3ms)
+Completed 200 OK in 167ms (Views: 128.3ms | ActiveRecord: 9.9ms | Allocations: 13919)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:55:28 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.28ms)
+Completed 200 OK in 122ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 7585)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 14:55:31 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000172, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000172}}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:41:in `set_trip'
+Completed 500 Internal Server Error in 45957ms (ActiveRecord: 0.4ms | Allocations: 141150)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/V1/routes_controller.rb:16:in `create'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 14:56:22 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (200.0ms)
+Completed 200 OK in 308ms (Views: 266.0ms | ActiveRecord: 16.0ms | Allocations: 2967781)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 14:56:27 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (88.82ms)
+Completed 200 OK in 604ms (Views: 94.8ms | ActiveRecord: 0.0ms | Allocations: 1280059)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 14:56:36 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000872, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000872}}
+  [1m[36mTrip Load (1.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:41:in `set_trip'
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7000872], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+  [1m[36mRoute Create (1.2ms)[0m  [1m[32mINSERT INTO "routes" ("trip_id", "route_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["route_id", 7000872], ["created_at", "2020-06-15 18:56:48.544828"], ["updated_at", "2020-06-15 18:56:48.544828"]]
+  ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+[active_model_serializers]   [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/routes_controller.rb:21:in `create'
+[active_model_serializers] Rendered TripSerializer with ActiveModelSerializers::Adapter::Attributes (4.86ms)
+Completed 200 OK in 11956ms (Views: 5.2ms | ActiveRecord: 5.0ms | Allocations: 307586)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:39:22 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.08ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.7ms | Allocations: 5489)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:39:29 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.62ms)
+Completed 200 OK in 935ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4694)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" ORDER BY "trips"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" ORDER BY "trips"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? LIMIT ?[0m  [["trip_id", 1], ["LIMIT", 11]]
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:41:39 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.37ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.7ms | Allocations: 5456)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:41:52 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:41:56 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.08ms)
+Completed 200 OK in 112ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 4692)
+
+
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:45:40 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.66ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.5ms | Allocations: 5456)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:45:44 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.88ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 5456)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:45:47 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.87ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.7ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:45:51 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.45ms)
+Completed 200 OK in 121ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 7362)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:46:03 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.65ms)
+Completed 200 OK in 123ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 4690)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:48:14 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.82ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:48:18 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.96ms)
+Completed 200 OK in 120ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 4692)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:49:25 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.21ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 1.1ms | Allocations: 5456)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:49:35 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.51ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:49:39 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.91ms)
+Completed 200 OK in 115ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 4692)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:50:32 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.7ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.6ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:50:35 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (16.76ms)
+Completed 200 OK in 142ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 4693)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:50:47 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.59ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:50:50 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.42ms)
+Completed 200 OK in 127ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 4699)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:51:04 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.91ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.2ms | Allocations: 5456)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:51:09 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.02ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.5ms | Allocations: 5456)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:51:18 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.37ms)
+Completed 200 OK in 121ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 4692)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 15:51:25 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000538, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000538}}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:41:in `set_trip'
+Completed 500 Internal Server Error in 128960ms (ActiveRecord: 0.3ms | Allocations: 258302)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:34 -0400
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:34 -0400
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/V1/routes_controller.rb:16:in `create'
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:34 -0400
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:34 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:42 -0400
+Processing by Api::V1::TripsController#index as */*
+Processing by Api::V1::TripsController#index as */*
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mTrip Load (10.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (7.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (6.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (5.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   [1m[36mRoute Load (0.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (574.03ms)
+[active_model_serializers]   [1m[36mRoute Load (1.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+Completed 200 OK in 905ms (Views: 883.0ms | ActiveRecord: 19.5ms | Allocations: 7718987)
+
+
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (694.61ms)
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (898.42ms)
+Completed 200 OK in 1117ms (Views: 1094.4ms | ActiveRecord: 19.2ms | Allocations: 9391799)
+
+
+Completed 200 OK in 1035ms (Views: 1018.1ms | ActiveRecord: 14.0ms | Allocations: 8867058)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (802.43ms)
+Completed 200 OK in 1291ms (Views: 1245.0ms | ActiveRecord: 9.4ms | Allocations: 10581016)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:45 -0400
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:45 -0400
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:45 -0400
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:45 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+Processing by Api::V1::TripsController#index as */*
+Processing by Api::V1::TripsController#index as */*
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (20.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (7.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mTrip Load (6.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (5.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (6.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (2.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (4.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (754.63ms)
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (20.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (704.77ms)
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+Completed 200 OK in 1229ms (Views: 1197.0ms | ActiveRecord: 29.2ms | Allocations: 9182548)
+
+
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+Completed 200 OK in 1144ms (Views: 1132.0ms | ActiveRecord: 8.4ms | Allocations: 8472140)
+
+
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1080.95ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1088.11ms)
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+Completed 200 OK in 1584ms (Views: 1499.5ms | ActiveRecord: 52.3ms | Allocations: 11864117)
+
+
+Completed 200 OK in 1519ms (Views: 1493.9ms | ActiveRecord: 14.8ms | Allocations: 11294843)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:48 -0400
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1313.64ms)
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:48 -0400
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:48 -0400
+Completed 200 OK in 1637ms (Views: 1618.5ms | ActiveRecord: 10.2ms | Allocations: 11957510)
+
+
+Processing by Api::V1::TripsController#index as */*
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:53:48 -0400
+Processing by Api::V1::TripsController#index as */*
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (5.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (540.21ms)
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+Completed 200 OK in 728ms (Views: 703.6ms | ActiveRecord: 4.7ms | Allocations: 5205667)
+
+
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (678.56ms)
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (929.78ms)
+Completed 200 OK in 1114ms (Views: 1095.2ms | ActiveRecord: 8.1ms | Allocations: 8157122)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (809.31ms)
+Completed 200 OK in 924ms (Views: 916.7ms | ActiveRecord: 4.5ms | Allocations: 6626237)
+
+
+Completed 200 OK in 1004ms (Views: 997.7ms | ActiveRecord: 3.5ms | Allocations: 7402920)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 15:54:46 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (85.96ms)
+Completed 200 OK in 237ms (Views: 97.8ms | ActiveRecord: 0.0ms | Allocations: 1105060)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 15:54:49 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000538, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000538}}
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7000538], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[36mRoute Create (2.8ms)[0m  [1m[32mINSERT INTO "routes" ("trip_id", "route_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["route_id", 7000538], ["created_at", "2020-06-15 19:54:50.138632"], ["updated_at", "2020-06-15 19:54:50.138632"]]
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mRoute Load (3.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+[active_model_serializers] Rendered TripSerializer with ActiveModelSerializers::Adapter::Attributes (235.23ms)
+Completed 200 OK in 446ms (Views: 259.5ms | ActiveRecord: 10.9ms | Allocations: 2489220)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 15:54:54 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (6.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (20.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (416.16ms)
+Completed 200 OK in 482ms (Views: 450.6ms | ActiveRecord: 28.9ms | Allocations: 2179240)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:00:22 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (6.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (681.96ms)
+Completed 200 OK in 772ms (Views: 757.6ms | ActiveRecord: 10.8ms | Allocations: 2181711)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:00:33 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (630.85ms)
+Completed 200 OK in 708ms (Views: 698.2ms | ActiveRecord: 6.0ms | Allocations: 2179240)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:00:44 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (7.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (337.15ms)
+Completed 200 OK in 591ms (Views: 513.6ms | ActiveRecord: 41.1ms | Allocations: 5054726)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:00:58 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (2.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (4.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (72.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (709.76ms)
+Completed 200 OK in 807ms (Views: 723.5ms | ActiveRecord: 80.7ms | Allocations: 2331445)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:02:27 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (0.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (26.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (618.13ms)
+Completed 200 OK in 716ms (Views: 660.3ms | ActiveRecord: 30.9ms | Allocations: 2331445)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:04:01 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (44.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (468.49ms)
+Completed 200 OK in 596ms (Views: 532.8ms | ActiveRecord: 50.2ms | Allocations: 2331445)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 16:04:15 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (150.58ms)
+Completed 200 OK in 307ms (Views: 165.6ms | ActiveRecord: 0.0ms | Allocations: 1889660)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 16:04:25 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000493, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000493}}
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7000493], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.92ms)
+Completed 200 OK in 119ms (Views: 13.2ms | ActiveRecord: 2.9ms | Allocations: 783878)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:06:17 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (3.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (516.65ms)
+Completed 200 OK in 582ms (Views: 567.0ms | ActiveRecord: 8.9ms | Allocations: 2328805)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 16:06:24 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (74.73ms)
+Completed 200 OK in 585ms (Views: 79.4ms | ActiveRecord: 0.0ms | Allocations: 1210663)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 16:06:28 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7001210, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7001210}}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (1.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7001210], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[36mRoute Create (1.5ms)[0m  [1m[32mINSERT INTO "routes" ("trip_id", "route_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["route_id", 7001210], ["created_at", "2020-06-15 20:06:28.455818"], ["updated_at", "2020-06-15 20:06:28.455818"]]
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+[active_model_serializers] Rendered TripSerializer with ActiveModelSerializers::Adapter::Attributes (234.27ms)
+Completed 200 OK in 423ms (Views: 260.5ms | ActiveRecord: 8.3ms | Allocations: 2598068)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:09:10 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (9.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (856.93ms)
+Completed 200 OK in 1021ms (Views: 1001.4ms | ActiveRecord: 15.3ms | Allocations: 2446328)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:09:26 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (10.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (42.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (666.61ms)
+Completed 200 OK in 742ms (Views: 682.4ms | ActiveRecord: 55.7ms | Allocations: 2442889)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:09:45 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (5.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (843.08ms)
+Completed 200 OK in 925ms (Views: 911.3ms | ActiveRecord: 9.7ms | Allocations: 2445535)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:09:51 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (9.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (28.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (16.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (592.37ms)
+Completed 200 OK in 669ms (Views: 608.6ms | ActiveRecord: 56.4ms | Allocations: 2445531)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:10:07 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (2.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (971.48ms)
+Completed 200 OK in 1066ms (Views: 1047.7ms | ActiveRecord: 7.6ms | Allocations: 2445533)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 16:10:12 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (76.6ms)
+Completed 200 OK in 276ms (Views: 83.2ms | ActiveRecord: 0.0ms | Allocations: 1208718)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 16:10:18 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7000050, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7000050}}
+  [1m[36mTrip Load (1.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (1.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7000050], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[36mRoute Create (2.2ms)[0m  [1m[32mINSERT INTO "routes" ("trip_id", "route_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["route_id", 7000050], ["created_at", "2020-06-15 20:10:18.731079"], ["updated_at", "2020-06-15 20:10:18.731079"]]
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mRoute Load (2.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+[active_model_serializers] Rendered TripSerializer with ActiveModelSerializers::Adapter::Attributes (321.91ms)
+Completed 200 OK in 643ms (Views: 333.1ms | ActiveRecord: 11.5ms | Allocations: 2873283)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:10:53 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (3.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (3.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (925.2ms)
+Completed 200 OK in 1018ms (Views: 1004.1ms | ActiveRecord: 9.7ms | Allocations: 2559569)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 16:10:57 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.1910983, "lon"=>-106.8175387, "search"=>{"lat"=>39.1910983, "lon"=>-106.8175387}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (80.38ms)
+Completed 200 OK in 230ms (Views: 87.7ms | ActiveRecord: 0.0ms | Allocations: 1211360)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 16:11:00 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7001550, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7001550}}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (1.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7001550], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+  [1m[35m (5.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[36mRoute Create (1.7ms)[0m  [1m[32mINSERT INTO "routes" ("trip_id", "route_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["route_id", 7001550], ["created_at", "2020-06-15 20:11:01.080166"], ["updated_at", "2020-06-15 20:11:01.080166"]]
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mRoute Load (2.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+[active_model_serializers] Rendered TripSerializer with ActiveModelSerializers::Adapter::Attributes (280.32ms)
+Completed 200 OK in 699ms (Views: 318.8ms | ActiveRecord: 25.0ms | Allocations: 2837104)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:11:32 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (2.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (24.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (9.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (731.71ms)
+Completed 200 OK in 853ms (Views: 812.0ms | ActiveRecord: 37.2ms | Allocations: 2674593)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:11:36 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (17.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (11.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.6ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (851.66ms)
+Completed 200 OK in 930ms (Views: 893.3ms | ActiveRecord: 32.7ms | Allocations: 2674539)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:11:41 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (9.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (51.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (803.52ms)
+Completed 200 OK in 873ms (Views: 803.3ms | ActiveRecord: 64.4ms | Allocations: 2673705)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:11:45 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (10.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (19.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (835.57ms)
+Completed 200 OK in 921ms (Views: 877.1ms | ActiveRecord: 33.0ms | Allocations: 2673707)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:11:49 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (12.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.0ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (31.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (4.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (864.47ms)
+Completed 200 OK in 990ms (Views: 900.3ms | ActiveRecord: 50.0ms | Allocations: 2673707)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 16:12:07 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (128.09ms)
+Completed 200 OK in 271ms (Views: 139.1ms | ActiveRecord: 0.0ms | Allocations: 1823004)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:12:23 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (10.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (17.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1106.34ms)
+Completed 200 OK in 1176ms (Views: 1139.8ms | ActiveRecord: 31.9ms | Allocations: 2674593)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:12:31 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (8.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (17.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (881.48ms)
+Completed 200 OK in 980ms (Views: 935.6ms | ActiveRecord: 29.3ms | Allocations: 2674539)
+
+
+Started POST "/api/v1/search" for ::1 at 2020-06-15 16:12:34 -0400
+Processing by Api::V1::SearchController#search as JSON
+  Parameters: {"lat"=>39.4816537, "lon"=>-106.0383518, "search"=>{"lat"=>39.4816537, "lon"=>-106.0383518}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (132.83ms)
+Completed 200 OK in 289ms (Views: 139.9ms | ActiveRecord: 0.0ms | Allocations: 1835578)
+
+
+Started POST "/api/v1/trips/1/routes" for ::1 at 2020-06-15 16:12:39 -0400
+Processing by Api::V1::RoutesController#create as JSON
+  Parameters: {"route_id"=>7001167, "trip_id"=>"1", "route"=>{"trip_id"=>"1", "route_id"=>7001167}}
+  [1m[36mTrip Load (22.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:40:in `set_trip'
+  [1m[36mRoute Load (8.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ? AND "routes"."route_id" = ? LIMIT ?[0m  [["trip_id", 1], ["route_id", 7001167], ["LIMIT", 1]]
+  ↳ app/controllers/api/V1/routes_controller.rb:15:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[36mRoute Create (2.8ms)[0m  [1m[32mINSERT INTO "routes" ("trip_id", "route_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["route_id", 7001167], ["created_at", "2020-06-15 20:12:39.386822"], ["updated_at", "2020-06-15 20:12:39.386822"]]
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/V1/routes_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mRoute Load (2.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/routes_controller.rb:20:in `create'
+[active_model_serializers] Rendered TripSerializer with ActiveModelSerializers::Adapter::Attributes (354.9ms)
+Completed 200 OK in 1003ms (Views: 411.4ms | ActiveRecord: 40.6ms | Allocations: 3521670)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:12:40 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (12.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (657.86ms)
+Completed 200 OK in 727ms (Views: 706.3ms | ActiveRecord: 16.8ms | Allocations: 2787797)
+
+
+Started GET "/api/v1/trips" for ::1 at 2020-06-15 16:14:10 -0400
+Processing by Api::V1::TripsController#index as */*
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (2.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.8ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRoute Load (1.9ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."trip_id" = ?[0m  [["trip_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/V1/trips_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1011.14ms)
+Completed 200 OK in 1074ms (Views: 1064.8ms | ActiveRecord: 7.1ms | Allocations: 2788215)
+
+

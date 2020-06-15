@@ -4,10 +4,6 @@ import {addTrip} from '../actions/addTrip';
 
 class TripInput extends React.Component {
 
-  // TripInput() {
-  //   super()
-  // }
-
   state = {
     name: '',
     description: ''

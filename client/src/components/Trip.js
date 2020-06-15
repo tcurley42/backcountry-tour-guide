@@ -1,15 +1,15 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
 import RoutesContainer from '../containers/RoutesContainer';
+import BarLoader from 'react-spinners/BarLoader';
 
 const  displayTrip = (trip) => {
   if (trip) {
     return (<div><h1>{trip.name}</h1><h3>{trip.description}</h3></div>);
   } else {
-    return "Loading...";
+    return <BarLoader/>;
+
   }
 }
-
 
 const Trip = (props) => {
 
@@ -20,7 +20,7 @@ const Trip = (props) => {
     <div>
     {displayTrip(trip)}
 
-      <RoutesContainer trip={trip}/>
+      <RoutesContainer trip={trip} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import RouteDisplay from './RouteDisplay';
 const Routes = (props) => {
 
 
@@ -7,7 +7,7 @@ const Routes = (props) => {
     <div>
       <ul>
         {props.routes && props.routes.map(route =>
-        <li key={route.id}>{route.route_id}</li>)}
+          <RouteDisplay route={route} />)}
       </ul>
     </div>
   )

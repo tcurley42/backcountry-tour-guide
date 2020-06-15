@@ -19,8 +19,4 @@ class App extends React.Component {
   }
 }
 
-const mapDispatchToProps = () => {
-
-}
-
 export default connect(null, {fetchTrips})(App);

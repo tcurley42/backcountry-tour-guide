@@ -17,7 +17,7 @@ class Api::V1::RoutesController < ApplicationController
     else
       @route = @trip.routes.build(route_params)
       if @route.save
-        render json: @route
+        render json: @trip
       else
         render json: {error: "Error creating Route"}
       end
@@ -41,7 +41,7 @@ class Api::V1::RoutesController < ApplicationController
   end
 
   def route_params
-    params.require(:trip_id).permit(:route_id)
+    params.require(:route).permit(:route_id, :trip_id)
   end
 
 end
