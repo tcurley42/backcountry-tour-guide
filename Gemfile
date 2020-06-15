@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 # Foreman to manage multiple processes
 gem 'foreman', '~> 0.87.1'
 # Use SCSS for stylesheets
@@ -43,7 +43,7 @@ gem 'pry'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use RestClient to handle RESTful requests to external APIs
-gem "rest-client", "~> 1.6.7"
+gem "rest-client", "~> 1.8.0"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
