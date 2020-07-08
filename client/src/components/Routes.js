@@ -7,7 +7,7 @@ const Routes = (props) => {
     <div>
       <ul>
         {props.routes && props.routes.map(route =>
-          <RouteDisplay route={route} />)}
+          <RouteDisplay key={route.id} route={route} />)}
       </ul>
     </div>
   )

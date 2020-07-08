@@ -2,6 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import fetchTrips from './actions/fetchTrips';
 import TripsContainer from './containers/TripsContainer';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -12,8 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        App
-        <TripsContainer/>
+      <TripsContainer/>
       </div>
     );
   }

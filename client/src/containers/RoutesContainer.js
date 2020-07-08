@@ -5,6 +5,8 @@ import RouteSearch from '../components/RouteSearch';
 import Routes from '../components/Routes';
 import BarLoader from 'react-spinners/BarLoader';
 
+import {Route, Switch} from 'react-router-dom';
+
 class RoutesContainer extends React.Component {
 
   displayRoutes() {
@@ -18,8 +20,11 @@ class RoutesContainer extends React.Component {
   render() {
     return (
       <div>
-        <RouteSearch tripId={this.props.trip && this.props.trip.id} />
-        {this.displayRoutes()}
+      <Switch>
+      <Route path="/trips/:id/routes/new" render={(routerProps) =>
+        <RouteSearch tripId={this.props.trip && this.props.trip.id} />} />
+        <Route path="/trips/:id" render={() => this.displayRoutes()}/>
+        </Switch>
       </div>
     )
   }
