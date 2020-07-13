@@ -1,16 +1,63 @@
 import React from 'react'
 import RouteDisplay from './RouteDisplay';
-const Routes = (props) => {
+class Routes extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {
+      routes: []
+    }
+  }
 
+  componentDidMount() {
+    console.log("fetching data");
+    this.fetchTrips(this.props.routes.map(route => route.route_id));
+    console.log("data fetched");
+  }
+
+  fetchTrips = (routes) => {
+    const data = {routeList: routes.join()}
+    fetch("http://localhost:3000/api/v1/fetch", {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    })
+    .then(response => response.json())
+    .then(data => this.handleData(data))
+    .catch(error => console.error(error));
+  }
+
+  handleData = (data) => {
+    let routeList = []
+    for (let i = 0; i < data["trails"].length; i++) {
+      routeList.push(data["trails"][i]);
+    }
+    console.log("Route List: " + routeList)
+
+    this.setState({
+      routes: routeList
+    })
+  }
+
+  render() {
   return(
     <div>
       <ul>
-        {props.routes && props.routes.map(route =>
-          <RouteDisplay key={route.id} route={route} />)}
+        {this.state.routes && this.state.routes.map(route =>
+          <RouteDisplay route={route} />)}
       </ul>
     </div>
   )
+}
 }
 
 export default Routes

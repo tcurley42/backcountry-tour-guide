@@ -14,4 +14,16 @@ class Api::V1::SearchController < ApplicationController
     results = JSON.parse(response)
     render json: results
   end
+
+  def fetch
+    routeList = params[:routeList]
+    url = "https://www.powderproject.com/data/get-trails-by-id?ids=#{routeList}&key=#{Rails.application.credentials.powder_project[:key]}"
+    response = RestClient::Request.execute(
+      method: "GET",
+      url: url
+    )
+    results = JSON.parse(response)
+    render json: results
+  end
+
 end
