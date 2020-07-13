@@ -79,11 +79,11 @@ class RouteSearch extends React.Component {
       return(
         <section>
           <div>
-            <form onSubmit={(e) => this.handleOnSubmit(e)}>
-              <label>Location</label>
+            <form onSubmit={(e) => this.handleOnSubmit(e)} className='form-box'>
+              <label className="input-label">Location</label>
               <input type='text' name='location' value={this.state.location} placeholder='City, State'
                 onChange={(e) => this.handleOnChange(e)}/>
-              <input type='submit' value="Submit"/>
+              <input type='submit' value="Search" className='button'/>
             </form>
 
             {this.state.routeList && this.state.routeList.map(route => <RouteInput key={route && route.id} route={route} tripId={this.props.tripId} />)}

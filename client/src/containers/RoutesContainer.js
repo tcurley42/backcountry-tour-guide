@@ -5,13 +5,13 @@ import RouteSearch from '../components/RouteSearch';
 import Routes from '../components/Routes';
 import BarLoader from 'react-spinners/BarLoader';
 
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 
 class RoutesContainer extends React.Component {
 
   displayRoutes() {
     if (this.props.trip) {
-      return <Routes routes={this.props.trip.routes} tripId={this.props.trip.id}/>;
+      return (<div><Link to={`/trips/${this.props.trip.id}/routes/new`}>Add Routes</Link><br/><Routes routes={this.props.trip.routes} tripId={this.props.trip.id}/></div>);
     } else {
       return <div><BarLoader/></div>;
     }

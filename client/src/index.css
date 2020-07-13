@@ -1,0 +1,106 @@
+body {
+    color: #666;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #111;
+}
+
+.l-box {
+    padding: 2em;
+}
+
+.header {
+    border-bottom-color: black;
+    border-radius: 0;
+}
+
+.form-box {
+    text-align: center;
+    font-size: 120%;
+    border-bottom: 1px solid #eee;
+}
+
+    .form-box .input-label {
+      margin: 0.3em;
+    }
+    .form-box .button {
+        background-color: grey;
+        color: white;
+        vertical-align: center;
+        font-size: 85%;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 4px;
+        margin: 0.3em;
+    }
+    .form input[type] {
+        margin: 0.3em auto;
+        text-align: left;
+    }
+
+.footer {
+    background: #111;
+    color: #666;
+    text-align: center;
+    padding: 1em;
+    font-size: 80%;
+}
+
+.trip-div {
+  padding: .5em .5em .5em 0em;
+}
+.trip:hover {
+  text-decoration: underline;
+}
+
+.trip:active {
+  color: black;
+}
+
+trip:visited {
+  color: purple;
+}
+
+.header {
+  background-color: lightgrey;
+}
+.header-link {
+  text-decoration: none;
+  background-color: grey;
+  color: white;
+  padding: 1em, 1.5em;
+  text-transform: uppercase;
+}
+
+.route-div {
+  border-color: black;
+  border-style: solid;
+  width: 45%;
+  margin: 1em;
+  padding: 0em 1em 1em 1em;
+}
+
+.route-inner-div{
+  text-align: center;
+}
+
+.route-display-label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.route-image-div {
+  text-align: center;
+}
+
+.route-submit {
+  text-align: center
+}
+
+.app-info {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 1em 1em 1em 0em;
+}

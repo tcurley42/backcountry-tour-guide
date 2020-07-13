@@ -1,5 +1,4 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {addRoute} from '../actions/addRoute';
 import RouteDisplay from './RouteDisplay.js';
@@ -25,10 +24,12 @@ class RouteInput extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='route-div'>
       <form onSubmit={e => this.handleOnSubmit(e)}>
         <RouteDisplay route={this.props.route}/>
+        <div className='route-submit'>
         <input type="submit" value="Add Route"/>
+        </div>
       </form>
       </div>
     )

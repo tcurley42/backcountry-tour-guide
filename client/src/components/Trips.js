@@ -6,7 +6,7 @@ const Trips = (props) => {
     return(
       <div>
         {props.trips.map(t =>
-          <div key={t.id}><Link to={`/trips/${t.id}`}>{t.name}</Link></div>
+          <div key={t.id} className='trip-div'><Link to={`/trips/${t.id}`} className='trip'>{t.name}</Link></div>
         )}
 
       </div>

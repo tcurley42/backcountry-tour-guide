@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import tripReducer from "./reducers/tripReducer";
 import { BrowserRouter as Router } from "react-router-dom";
+import './index.css';
 
 import App from "./App";
 

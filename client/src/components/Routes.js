@@ -10,9 +10,9 @@ class Routes extends React.Component {
   }
 
   componentDidMount() {
-    console.log("fetching data");
-    this.fetchTrips(this.props.routes.map(route => route.route_id));
-    console.log("data fetched");
+    if (this.props.routes && this.props.routes.length > 0) {
+      this.fetchTrips(this.props.routes.map(route => route.route_id));
+    }
   }
 
   fetchTrips = (routes) => {
@@ -53,7 +53,7 @@ class Routes extends React.Component {
     <div>
       <ul>
         {this.state.routes && this.state.routes.map(route =>
-          <RouteDisplay route={route} />)}
+          <RouteDisplay route={route} key={route.id}/>)}
       </ul>
     </div>
   )
