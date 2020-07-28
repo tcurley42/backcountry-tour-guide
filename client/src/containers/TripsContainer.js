@@ -8,10 +8,12 @@ import {Route, Switch} from 'react-router-dom';
 
 class TripsContainer extends React.Component {
 
+  // Fetch Trips asynchronously while component renders
   componentDidMount() {
     this.props.fetchTrips();
   }
 
+  // Determine what to display based on the route
   render() {
     return (
       <div>
@@ -32,4 +34,6 @@ const mapStateToProps = (state) => {
   }
 }
 
+// Use fetchTrips to return the dispatch function after asynchronously
+// retrieving the data to then add the results to the store
 export default connect(mapStateToProps, {fetchTrips})(TripsContainer);

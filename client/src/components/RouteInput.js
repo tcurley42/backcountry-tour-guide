@@ -5,9 +5,6 @@ import RouteDisplay from './RouteDisplay.js';
 
 class RouteInput extends React.Component {
 
-  state = {
-    refresh: false
-  }
 
   handleOnSubmit = (e) => {
     this.props.addRoute(
@@ -17,9 +14,6 @@ class RouteInput extends React.Component {
       },
       this.props.tripId
     );
-    this.setState({
-      refresh:true
-    })
   }
 
   render() {

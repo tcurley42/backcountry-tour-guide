@@ -9,6 +9,8 @@ import {Route, Switch, Link} from 'react-router-dom';
 
 class RoutesContainer extends React.Component {
 
+  // If the trip is defined in the props, render routes and Add Route button
+  // Else, render loading
   displayRoutes() {
     if (this.props.trip) {
       return (<div><Link to={`/trips/${this.props.trip.id}/routes/new`}>Add Routes</Link><br/><Routes routes={this.props.trip.routes} tripId={this.props.trip.id}/></div>);
@@ -17,6 +19,8 @@ class RoutesContainer extends React.Component {
     }
   }
 
+  // If the user is trying to add a new route to this trip, render the RouteSearch component
+  // Else, render the display of all routes
   render() {
     return (
       <div>
@@ -30,6 +34,7 @@ class RoutesContainer extends React.Component {
   }
 }
 
+// This component needs the trips from the state so map it here
 const mapStateToProps = (state) => {
   return {
     trips: state.trips

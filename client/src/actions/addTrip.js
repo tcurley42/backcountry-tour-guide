@@ -1,3 +1,5 @@
+// addTrip returns the dispatch function using the payload from the fetch request
+// This allows us to retrieve data asynchronously and then update the store
 export const addTrip = (trip) => {
   return (dispatch) => {
     fetch('http://localhost:3000/api/v1/trips', {
